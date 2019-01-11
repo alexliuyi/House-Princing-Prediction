@@ -145,7 +145,7 @@ def train_test_model(X_train, y_train, X_test, y_test, model_name, model):
     clf = model
     start = time.time()
     clf.fit(X_train, y_train)
-    # 计时
+    # timing
     end = time.time()
     duration = end - start
     print('Timing {:.4f}s'.format(duration))
