@@ -54,8 +54,7 @@ def main():
     X_test = utils.transform_test_data(test_data, label_encs, onehot_enc, scaler, pca)
     X_valid = utils.transform_test_data(valid, label_encs, onehot_enc, scaler, pca)
     
-    # 构建训练测试数据
-    # 数据建模及验证
+    # Testing
     print('\n===================== Modeling =====================')
     model_name_param_dict = {'LR':    LinearRegression(),
                              'Lasso': Lasso(alpha=0.01),
@@ -64,7 +63,7 @@ def main():
                              'SGD':SGDRegressor()
                              }
 
-    # 比较结果的DataFrame
+    # Create tables
     results_df = pd.DataFrame(columns=['MSE', 'Time (s)'],
                               index=list(model_name_param_dict.keys()))
     results_df.index.name = 'Model'
