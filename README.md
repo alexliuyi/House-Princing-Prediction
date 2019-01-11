@@ -1,2 +1,3 @@
 # House-Princing-Prediction
-House Prices: Advanced Regression Techniques
+
+Kaggle problem for predicting the houses price in Boston.
